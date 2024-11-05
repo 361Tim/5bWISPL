@@ -1,6 +1,11 @@
-import React from 'react';
 
-function Card({ name, imgSrc, description }) {
+interface CardProps {
+    name: string;
+    imgSrc: string;
+    description: string;
+}
+
+function Card({ name, imgSrc, description }: CardProps) {
     return (
         <div className="bg-[#2b2b17] rounded-lg overflow-hidden shadow-lg">
             <img src={imgSrc} alt={name} className="w-full h-48 object-cover" />

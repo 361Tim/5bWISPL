@@ -1,11 +1,10 @@
-
-import Card from './components/Card';
+import CardContainer from './components/CardContainer'
 
 
 const cardData = [
   {
     name: 'Susi Quattro',
-    imgSrc: 'https://picsum.photos/300',
+    imgSrc: 'https://picsum.photos/300/',
     description: 'Lorem ipsum dolor sit amet consectetur. Quis vitae ut...'
   },
   {
@@ -37,15 +36,9 @@ function App() {
       <header className="text-3xl font-bold text-right p-8">
         HTL Dornbirn 5bWI
       </header>
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-        {cardData.map((card, index) => (
-          <Card
-            key={index}
-            name={card.name}
-            imgSrc={card.imgSrc}
-            description={card.description}
-          />
-        ))}
+      <div >
+        <CardContainer
+          cardsData={cardData} />
       </div>
     </div>
   );

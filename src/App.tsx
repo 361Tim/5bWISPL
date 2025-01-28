@@ -1,34 +1,4 @@
-import CardContainer from './components/CardContainer'
-
-
-const cardData = [
-  {
-    name: 'Susi Quattro',
-    imgSrc: 'https://picsum.photos/300/',
-    description: 'Lorem ipsum dolor sit amet consectetur. Quis vitae ut...'
-  },
-  {
-    name: 'Stella Starlight',
-    imgSrc: 'https://picsum.photos/300',
-    description: 'Lorem ipsum dolor sit amet consectetur. Quis vitae ut...'
-  },
-  {
-    name: 'Paula Paulsen',
-    imgSrc: 'https://picsum.photos/300',
-    description: 'Lorem ipsum dolor sit amet consectetur. Quis vitae ut...'
-  },
-  {
-    name: 'Paula Paulsen',
-    imgSrc: 'https://picsum.photos/300',
-    description: 'Lorem ipsum dolor sit amet consectetur. Quis vitae ut...'
-  },
-  {
-    name: 'Paula Paulsen',
-    imgSrc: 'https://picsum.photos/300',
-    description: 'Lorem ipsum dolor sit amet consectetur. Quis vitae ut...'
-  },
-
-];
+import CardContainer from './components/CardContainer';
 
 function App() {
   return (
@@ -36,10 +6,7 @@ function App() {
       <header className="text-3xl font-bold text-right p-8">
         HTL Dornbirn 5bWI
       </header>
-      <div >
-        <CardContainer
-          cardsData={cardData} />
-      </div>
+      <CardContainer />
     </div>
   );
 }

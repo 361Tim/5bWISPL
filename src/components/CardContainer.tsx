@@ -10,7 +10,6 @@ type Person = {
 
 export default function CardContainer() {
     const [people, setPeople] = useState<Person[]>([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch("http://10.115.1.37:8055/items/people")
@@ -29,9 +28,7 @@ export default function CardContainer() {
             .catch((error) => {
                 console.error("Fehler beim Laden der Daten:", error);
             })
-            .finally(() => {
-                setLoading(false);
-            });
+
     }, []);
 
 
@@ -40,7 +37,7 @@ export default function CardContainer() {
             {people.map((person) => (
                 <Card
                     key={`${person.firstname}-${person.lastname}`}
-                    imgSrc={`http://10.115.1.37:8055/assets/5f266009-d887-4535-a68d-3514a7710306`}
+                    imgSrc={"http://10.115.1.37:8055/assets/" + person.image}
                     name={`${person.firstname} ${person.lastname}`}
                     description={`Geburtstag: ${person.birthday}`}
                 />

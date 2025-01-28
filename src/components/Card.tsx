@@ -15,7 +15,7 @@ function Card({ name, imgSrc, description }: CardProps) {
                 />
             </div>
             <div className="p-4 text-center">
-                <div className="font-bold text-lg mb-2">{name}</div>
+                <div className="text-gray-600 font-bold text-lg mb-2">{name}</div>
                 <div className="text-gray-600 text-sm">{description}</div>
             </div>
         </div>
